@@ -2,10 +2,12 @@
 <html>
 <head>
     <title></title>
+<script src="assets/js/jquery-1.11.1.min.js"></script>
    <?php
    function css()
    {?>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
    <?php
    }
@@ -124,7 +126,7 @@ function navbar(){?>
 })    
     
 </script>
-<script src="assets/js/jquery-1.11.1.min.js"></script>
+
 <script src="assets/js/bootstrap.min.js"></script>
 
 </body>

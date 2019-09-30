@@ -1,3 +1,9 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','marketing');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +34,18 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">BAND</a></li>
-        <li><a href="#tour">TOUR</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <?php
+
+        $sql_query = mysqli_query($conn,"select * from menus");
+
+        while ($row = mysqli_fetch_array($sql_query)) {?>
+         <li><a href="<?php echo $row['link'];?>"><?php echo $row['title'];?></a></li>
+         <?php 
+        }
+
+        ?>
+        
+        
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
           <span class="caret"></span></a>
